@@ -1,7 +1,5 @@
-"""
-Author: Kexuan Zou
-Date: Nov 10, 2018
-"""
+# Author: Kexuan Zou
+# Date: Nov 10, 2018
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -29,7 +27,7 @@ def data_gen():
     while True:
         yield np.random.uniform(0, 10, 2)
 
-ani = animation.FuncAnimation(fig, update, data_gen, interval=500)
+ani = animation.FuncAnimation(fig, update, data_gen, interval=200)
 for i, txt in enumerate(tx_text):
     ax.annotate(txt, (tx_y[i], tx_x[i]))
 
