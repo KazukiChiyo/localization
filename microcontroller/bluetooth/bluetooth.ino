@@ -27,6 +27,7 @@ SoftwareSerial bluetooth(bluetoothTx, bluetoothRx);
 void setup()
 {
   Serial.begin(9600);
+  delay(1000);
   bluetooth.begin(115200);  // The Bluetooth Mate defaults to 115200bps
   bluetooth.print("$");  // Print three times individually
   bluetooth.print("$");
