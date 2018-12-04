@@ -7,9 +7,9 @@ from model import Anchor, Localizer
 from server import pair_bt, rssi_query_one, rssi_query_all
 import time
 
-rssi_0 = [472.53/1024, 472.53/1024, 472.53/1024, 1.33, 1.20]
-rssi = [356.55/1024, 367.955/1024, 362.03/1024, 0.5, 0.5]
-tx_x = [2.7, 0, 2.7, 5, 4]
+rssi_0 = [439.43/1024, 439.43/1024, 439.43/1024, 1.33, 1.20]
+rssi = [364.415/1024, 366.29/1024, 368.055/1024, 0.5, 0.5]
+tx_x = [2.7, 0, 2.7, 5.5, 4]
 tx_y = [0.8, 1.5, 3.6, 3.5, 3]
 tx_sprite = 's'
 rx_sprite = 'o'
@@ -26,7 +26,7 @@ model = Localizer()
 start_time = time.time()
 pred = model.transform(anchors[:3])
 print("--- %s seconds ---" % (time.time() - start_time))
-print("Predicted coordinate for RX is", pred)
+print("Predicted coordinates for RX is", pred)
 
 fig, ax = plt.subplots()
 ax.scatter(tx_y, tx_x, s=50, c='r', marker=tx_sprite)
